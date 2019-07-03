@@ -1,0 +1,107 @@
+1)      The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns in both tables.                     
+                      INNER JOIN is the same as JOIN
+                           SELECT customer_name
+                           FROM customer
+                          INNER JOIN order
+                          ON customer.customer_name=order._name;customer               
+
+
+2)     The LEFT JOIN keyword returns all the rows from the left table (Customers), even if there are no matches in the right table (Orders).
+                   SELECT Customers.CustomerName, Orders.OrderID
+                   FROM Customers
+                   LEFT JOIN Orders
+                   ON Customers.CustomerID=Orders.CustomerID
+                   ORDER BY Customers.CustomerName; 
+
+3)     In some databases RIGHT JOIN is called RIGHT OUTER JOIN.
+       
+                 SELECT Orders.OrderID, customer.FirstName
+                 FROM Orders
+                 RIGHT JOIN customer
+                ON Orders.CostomerID= customerID
+                ORDER BY Orders.OrderID;
+
+4)  The FULL OUTER JOIN keyword combines the result of both LEFT and RIGHT joins.
+       SELECT Customers.CustomerName, Orders.OrderID
+       FROM Customers
+      FULL OUTER JOIN Orders
+      ON Customers.CustomerID=Orders.CustomerID
+    ORDER BY Customers.CustomerName; 
+5) The SQL UNION operator combines the result of two or more SELECT statements.
+             SELECT column_name(s) FROM customer
+             UNION
+             SELECT column_name(s) FROM order;
+
+
+6)   SQL statement uses UNION ALL to select all tables.
+
+          SELECT City FROM Customers  
+         UNION ALL 
+         SELECT City FROM customer
+        ORDER BY City;
+ 
+7) The SELECT INTO statement selects data from one table and inserts it into a new table. 
+
+             SELECT *
+            INTO Customers
+            FROM Customers;
+
+8)     The FULL OUTER JOIN keyword combines the result of both LEFT and RIGHT joins.
+        
+         SELECT Customers.CustomerName, Orders.OrderID
+         FROM Customers
+         FULL OUTER JOIN Orders
+         ON Customers.CustomerID=Orders.CustomerID
+         ORDER BY Customers.CustomerName;
+ 
+9)  The INSERT INTO SELECT statement copies data from one table and inserts it into an existing table.
+                 INSERT INTO table2
+                 SELECT * FROM table1; 
+10)  The CREATE DATABASE statement is used to create a database.
+
+        CREATE DATABASE my_db;
+
+11) CREATE TABLE statement is used to create a table in a database.
+
+12)   SQL constraints are used to specify rules for the data in a table.
+
+13)   The NOT NULL constraint enforces a column to NOT accept NULL values.
+
+14)   The UNIQUE constraint uniquely identifies each record in a database table
+
+15)   PRIMARY KEY constraint uniquely identifies each record in a database table.
+
+15)   A FOREIGN KEY in one table points to a PRIMARY KEY in another table.
+
+16)   The CHECK constraint is used to limit the value range that can be placed in a column.
+
+17)  The DEFAULT constraint is used to insert a default value into a column.
+
+18)  The CREATE INDEX statement is used to create indexes in tables.
+
+19)  The DROP INDEX statement is used to delete an index in a table.
+         
+        DROP INDEX index_name ON table_name
+
+20)   The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+
+             ALTER TABLE table_name
+             ADD column_name datatype
+
+21)   Auto-increment allows a unique number to be generated when a new record is inserted into a table.
+             ALTER TABLE Persons AUTO_INCREMENT=99
+
+22)   In SQL a view is a virtual table based on the result-set of an SQL statement.
+
+23)    data types for storing a date or a date/time value in the database.
+
+24)  NULL values represent missing unknown data.
+
+25)  ISNULL function is used to specify how we want to treat NULL values.
+
+26)  A data type is what kind of value a column can contain.
+
+27)  Data types and ranges for Microsoft Access, MySQL and SQL Server
+
+      MySQL is three main types text,number, and Date/Time types.
+      SQL server defined data type, description,storage.s
